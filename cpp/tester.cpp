@@ -98,6 +98,9 @@ bool run_test(const std::string& case_name) {
         if (!fs::exists(out_file)) {
              print_colored("⚠️ SKIPPED (Output file not found)", "bold");
              std::cout << std::endl;
+             // std::string actual_output = std::to_string(solution(input_str, input_int));
+             // std::ofstream output_stream(out_file);
+             // output_stream << actual_output;
              return false;
         }
         std::string expected_output = read_file_content(out_file);
